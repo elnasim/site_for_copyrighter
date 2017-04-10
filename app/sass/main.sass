@@ -1,0 +1,815 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #262121
+body input:required:valid,
+body textarea:required:valid
+	color: #262121
+
+html
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+h1
+	margin: 0
+	font-size: 44px
+	text-align: center
+	font-family: "PFCentroSlabProMedium", sans-serif
+	strong
+		text-transform: uppercase
+
+h2
+	margin: 0
+	margin-bottom: 85px
+	padding: 0
+	font-size: 30px
+	font-family: "PFCentroSlabProMedium", sans-serif
+	text-align: center
+	color: #0d0101
+	text-transform: uppercase
+
+h4
+	margin: 0
+	margin-bottom: 15px
+	padding: 0
+	font-size: 15px
+	text-align: center
+	color: #0d0101
+	text-transform: uppercase
+
+//preloader
+
+
+.hellopreloader_preload
+  display: block
+  position: fixed
+  z-index: 99999
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  min-width: 1000px
+  background: #EF4836 url(http://hello-site.ru//main/images/preloads/rings.svg) center center no-repeat
+  background-size: 105px
+  display: none
+.preloader-active
+	display: block
+
+
+.delay03
+	animation-delay: 0.3s
+.delay06
+	animation-delay: 0.6s
+.delay09
+	animation-delay: 0.9s
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.top-line
+	background-color: $accent
+	position: relative
+
+.top-nav
+	ul
+		margin: 20px 0
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-block
+			a
+				transition: all .5s ease
+				color: #fff
+				text-transform: uppercase
+				font-size: 14px
+				padding: 0 11px
+				&:hover
+					text-decoration: none
+					color: #0b0a0a
+
+.phone
+	text-align: right
+	color: #fff
+	font-size: 18px
+	font-family: "PFCentroSlabProMedium", sans-serif
+	.fa-mobile
+		font-size: 20px
+
+.header-content
+	min-height: 600px
+	background-image: url(/img/bg.jpg)
+	background-position: bottom center
+	background-size: cover
+	color: #fff
+	padding: 75px 0 38px
+
+.descript
+	margin-top: 225px
+	font-family: "RalewaySemiBold", sans-serif
+	font-size: 20px
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			margin-bottom: 35px
+			.fa
+				color: $accent
+				margin-right: 15px
+
+.form-top
+	background-color: rgba(61,61,61, .7)
+	padding: 45px 50px
+	margin-top: 112px
+	p
+		text-align: center
+		font-family: "PFCentroSlabProMedium", sans-serif
+		font-size: 20px
+		line-height: 30px
+		margin-bottom: 50px
+		margin-top: 0
+	.contact-form
+		span
+			display: block
+			font-size: 14px
+			letter-spacing: 1px
+			color: #d1d1d1
+			margin-bottom: 10px
+		input
+			transition: all .25s ease
+			display: block
+			margin-bottom: 35px
+			width: 100%
+			background-color: #626262
+			border: none
+			font-size: 14px
+			font-family: "PFCentroSlabProMedium", sans-serif
+			color: #262121
+			padding: 18px 8px
+			border-top: 3px solid #000
+			&::placeholder
+				color: #262121
+			&:focus
+				&::placeholder
+					opacity: 0
+				border-top: 3px solid transparent
+		.button-wrapper
+			text-align: center
+		button
+			background-color: $accent
+			border: none
+			border-bottom: 3px solid darken($accent, 6%)
+			font-family: "PFCentroSlabProBold", sans-serif
+			text-transform: uppercase
+			font-size: 20px
+			padding: 18px 28px
+			&:active
+				border-bottom: none
+				margin-top: 3px
+
+.arrow-down
+	margin-top: 88px
+	text-align: center
+	img
+		cursor: pointer
+
+//toggle-menu
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 22px
+  position: absolute
+  z-index: 1
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.hidden-menu
+	text-align: center
+	display: none
+	ul
+		li
+			display: block
+			a
+				display: block
+				padding: 15px
+				font-size: 18px!important
+
+.s-all
+	padding: 62px 0
+
+.s-white
+	background-color: #fff
+
+.s-gray
+	background-color: #f3f3f3
+
+.section-head
+	position: relative
+	&::after
+		content: ''
+		background-color: $accent
+		height: 3px
+		width: 165px
+		position: absolute
+		bottom: -20px
+		left: 50%
+		transform: translate(-50%, 0)
+
+.s-1
+	.section-content
+		p
+			margin: 0
+		img
+			margin-top: 16px
+	.s1-text
+		opacity: 0
+
+.animated
+	opacity: 1
+
+.s-2
+	.section-content
+		p
+			text-align: center
+			margin: 0 15px
+.s2-items
+	text-align: center
+	margin-top: 85px
+	opacity: 0
+	.s2item-wrapper
+		p
+			font-family: "RalewayBold", sans-serif
+			line-height: 22px
+			margin-bottom: 76px
+	.s2icon-wrapper
+		display: inline-block
+		position: relative
+		background-color: $accent
+		border-radius: 100%
+		width: 146px
+		height: 146px
+		img
+			width: 82px
+			position: absolute
+			top: 33px
+			left: 36px
+
+.s2-bottom
+	margin-top: 35px
+	p
+		margin-bottom: 30px!important
+	ul
+		padding-left: 0px
+		margin-left: -23px
+		list-style-type: none
+	.fa
+		color: $accent
+		margin-right: 10px
+		font-size: 12px
+
+.s3-item
+	z-index: 5
+	padding: 26px 20px
+	p
+		text-align: center
+		font-family: "RalewayBold", sans-serif
+	ul
+		list-style-type: none
+		padding: 0
+		li
+			margin-bottom: 34px
+
+.s3item-left, .s3item-right
+	opacity: 0
+
+.s3item-left
+	background-color: rgba(255,0,0,.05)
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		background-image: url(/img/s-3/png/error.png)
+		background-size: 45%
+		background-position: center
+		opacity: .12
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		z-index: -1
+	.fa
+		color: $accent
+		margin-right: 12px
+	ul
+		li:nth-child(5)
+			margin-bottom: 63px
+
+.s3item-right
+	padding-top: 54px
+	background-color: rgba(114,255,0,.05)
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		background-image: url(/img/s-3/png/success.png)
+		background-size: 45%
+		background-position: center
+		opacity: .12
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		z-index: -1
+	.fa
+		color: #37ac20
+		margin-right: 12px
+	ul
+		li:nth-child(3)
+			margin-bottom: 63px
+
+.repeat-form
+	padding: 20px 0
+	background-image: url(/img/bg.jpg)
+	background-position: center
+	background-size: cover
+	p
+		text-align: center
+		color: #fff
+		font-family: "PFCentroSlabProMedium", sans-serif
+		font-size: 20px
+	input
+		border: 1px solid #fff
+		background-color: transparent
+		width: 100%
+		padding: 10px 12px
+		font-family: "PFCentroSlabProMedium", sans-serif
+		color: #757575
+		&:required:valid
+			color: #fff
+		&:focus
+			&::placeholder
+				opacity: 0
+	button
+		border: none
+		background-color: $accent
+		font-family: "PFCentroSlabProBold", sans-serif
+		color: #fff
+		padding: 11px
+	input, button
+		margin-top: 48px
+
+.s4item
+	opacity: 0
+	margin-bottom: 55px
+	border-radius: 5px
+	padding: 6px 15px
+	background-color: $accent
+	.item-text, .item-icon
+		height: 210px
+		display: table-cell
+		vertical-align: middle
+		line-height: 1.5
+	.item-icon
+		padding: 0 12px
+		.img-wrapper
+			background-color: #fff
+			border-radius: 100%
+			width: 115px
+			height: 115px
+			position: relative
+			img
+				height: 82px
+				width: 82px
+				position: absolute
+				top: 19px
+				left: 16px
+	.item-text
+		color: #fff
+
+.s-5
+	.section-content
+		ul
+			list-style-type: none
+			padding-left: 0
+			li
+				margin-bottom: 30px
+			li:last-child
+				margin-bottom: 0
+			.fa
+				margin-right: 15px
+				color: $accent
+
+.s-6
+	min-height: 1000px
+	.s6-item
+		&:nth-child(2)
+				font-size: 12px
+		margin-bottom: 100px
+		position: relative
+		padding: 28px 10px
+		text-align: center
+		background-color: $gray
+		font-size: 14px
+		font-family: "PFCentroSlabProMedium",sans-serif
+		width: 200px
+		height: 280px
+		margin: 0 15px 50px
+		display: inline-block
+		vertical-align: top
+		.s6item-text
+			text-transform: uppercase
+		.s6item-content
+			position: absolute
+			font-size: 13px
+			font-family: "RalewayRegular", sans-serif
+			top: -35px
+			left: -85px
+			background-color: $gray
+			z-index: 999
+			transition: all .5s ease
+			opacity: 0
+			padding: 20px 10px
+			width: 360px
+			line-height: 1.5
+			height: 360px
+			transform: scale(.5)
+			img
+				height: 89px
+				width: 89px
+				margin-bottom: 15px
+		&:hover
+			.s6item-content
+				transform: scale(1)
+				opacity: 1
+		.s6item-img
+			margin-bottom: 40px
+			img
+				height: 89px
+				width: 89px
+
+.s6-items
+	opacity: 0
+
+.s7-img-wrapper
+	margin-top: 29px
+	img
+		border-radius: 100%
+		border: 7px solid $accent
+
+.s-8
+	background-color: $accent
+	color: #fff
+	font-family: "PFCentroSlabProMedium",sans-serif
+	font-size: 14px
+	text-align: center
+	span
+		display: block
+		color: #fff072
+		font-family: "PFCentroSlabProBold",sans-serif
+		font-size: 40px
+
+.owl-carousel
+	position: relative
+	.carousel-item
+		height: 618px
+		width: 1170px
+		display: table-cell
+		vertical-align: middle
+	.owl-nav
+		position: absolute
+		color: $accent
+		font-size: 36px
+		top: 45%
+		z-index: 10
+		.owl-prev
+			position: absolute
+			left: -40px
+		.owl-next
+			position: absolute
+			left: 1180px
+
+//magnific-popup
+.mfp-with-zoom
+  .mfp-container, &.mfp-bg
+    opacity: 0
+    transition: all 0.3s ease-out
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+    &.mfp-bg
+      opacity: 0.8
+  &.mfp-removing
+    .mfp-container, &.mfp-bg
+      opacity: 0
+
+.s-10
+	background-image: url(/img/bg.jpg)
+	background-size: cover
+	h2
+		color: #fff
+
+.gallery-sertificates
+	.gallery-item
+		overflow: hidden
+		position: relative
+		margin-bottom: 30px
+		border: 3px solid $accent
+		img
+			transition: all .5s ease
+		a
+			display: block
+		.gallery-content
+			position: absolute
+			top: 0
+			left: 0
+			background-color: rgba(123,123,123,.4)
+			height: 100%
+			width: 100%
+			opacity: 0
+			transition: all .5s ease
+			.fa
+				margin-top: 27%
+				margin-left: 50%
+				font-size: 24px
+				color: $accent
+		&:hover
+			.gallery-content
+				opacity: 1
+			img
+				transform: scale(1.2)
+
+.s-11
+	padding-bottom: 18px
+	text-align: center
+	.fa
+		font-size: 40px
+		color: #fff
+	.link-works
+		background-color: $accent
+		width: 60px
+		height: 60px
+		display: inline-block
+		border-radius: 100%
+		position: relative
+		a
+			position: absolute
+			left: 11px
+			top: 12px
+			display: block
+	.links-wrapper
+		margin-bottom: 45px
+		display: inline-block
+
+.s-12
+	padding-bottom: 20px
+
+.s12-item
+	transition: all .25s ease
+	text-align: center
+	background-color: #fff
+	border: 3px solid #6e6e6e
+	padding: 22px 33px
+	margin-bottom: 45px
+	opacity: 0
+	.img-wrapper
+		margin-bottom: 40px
+	.text-wrapper
+		font-family: "PFCentroSlabProMedium", sans-serif
+		font-size: 14px
+		text-transform: uppercase
+		.main-text
+			display: table-cell
+			vertical-align: middle
+			height: 90px
+			width: 280px
+	.stars
+		display: block
+		font-size: 14px
+		color: #808080
+		letter-spacing: 3px
+		transition: all .25s ease
+	.priсe
+		font-family: "PFCentroSlabProBold", sans-serif
+		font-size: 12px
+		margin-bottom: 45px
+		display: block
+		.number
+			font-size: 30px
+		.fa
+			font-size: 18px
+			color: $accent
+	.price-button
+		a
+			display: inline-block
+			background-color: $accent	
+			padding: 20px 94px
+			font-family: "PFCentroSlabProMedium", sans-serif
+			text-transform: uppercase
+			font-size: 18px
+			color: #fff
+			transition: all .25s ease
+			&:hover
+				text-decoration: none
+				background-color: darken($accent, 3%)
+			&:focus
+				text-decoration: none
+	&:hover
+		transform: scale(1.1)
+		border: 3px solid $accent
+		.stars
+			color: $accent
+
+.animated
+	opacity: 1
+
+.my-mfp-zoom-in
+  .zoom-anim-dialog
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog
+    transform: scale(0.8)
+    opacity: 0
+
+.zoom-anim-dialog
+	background-color: #fff
+	width: 80%
+	margin-left: 10%
+	padding: 50px
+
+.s-14
+	text-align: center
+	ul
+		list-style-type: none
+		padding-left: 0
+		font-family: "PFCentroSlabProMedium", sans-serif
+		li
+			margin-bottom: 25px
+			.fa
+				color: $accent
+				font-size: 35px
+
+.s-15
+	p
+		margin-top: 60px
+
+.spoiler
+  display: block
+
+.btn
+  display: block
+  border: none
+  border-radius: 4px
+  font-size: 16px
+  padding: 24px 28px
+  background-color: $gray
+  color: #000
+  font-family: "RalewayBold", sans-serif
+  cursor: pointer
+  margin-bottom: 30px
+  .arrow_spoiler
+  	float: right
+  	text-align: center
+
+.spoiler input[type=checkbox]
+  display: none
+
+.text
+  padding: 20px
+  border-radius: 4px
+  margin: -28px 0 20px
+  background-color: $gray
+
+.spoiler input[type=checkbox]
+  ~ .text
+    display: none
+  &:checked ~ .text
+    display: block
+
+footer
+	background-color: #323232
+	color: #fff
+	padding: 43px 0
+	ul
+		list-style-type: none
+		padding-left: 0
+		li
+			a
+				color: #fff
+				&:hover
+					color: #fff
+	.footer-contacts
+		text-align: right
+		margin-top: 60px
+		.fa
+			margin-right: 5px
+
+.buttonUp
+	background-color: $accent
+	height: 60px
+	width: 60px
+	position: fixed
+	right: -120px
+	bottom: 20px
+	cursor: pointer
+	border-radius: 100%
+	text-align: center
+	z-index: 5
+	transition: all .25s ease
+	opacity: .7
+	&:hover
+		opacity: 1
+	.fa
+		margin-top: 35%
+		color: #fff
+.activeButton
+	right: 20px
+
+.thx
+	background-color: rgba(255,255,255,1)
+	position: fixed
+	left: 50%
+	transform: translate(-50%, 0)
+	top: 50%
+	border-radius: 4px
+	z-index: 999
+	font-size: 30px
+	color: $accent
+	text-align: center
+	padding: 10px 10px
+	font-family: "PFCentroSlabProMedium", sans-serif
+	opacity: 0
+	transition: all .5s ease
+	visibility: hidden
+.thx-active
+	opacity: 1
+	visibility: visible
+
+
+
+
+@import "media" // Всегда в конце
